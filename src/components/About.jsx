@@ -1,5 +1,9 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
+import AnimatedTitle from './AnimatedTitle'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
 	/* ---------------------------------- gsap ---------------------------------- */
@@ -14,6 +18,12 @@ const About = () => {
 				pinSpacing: true,
 			},
 		})
+
+		clipAnimation.to('.mask-clip-path', {
+			width: '100vw',
+			height: '100vh',
+			borderRadius: 0,
+		})
 	})
 
 	return (
@@ -22,10 +32,9 @@ const About = () => {
 				<h2 className='font-general text-sm uppercase md:text-sm'>
 					Welcome to Zentry
 				</h2>
-				<div className='mt-5 text-center text-4xl uppercase leading-[.8] md:text-8xl'>
-					disc<b>o</b>ver the world's
-					<br /> l<b>a</b>rgest shared adventure
-				</div>
+
+				<AnimatedTitle title="disc<b>o</b>ver the world's  l<b>a</b>rgest <br/>shared adventure" containerClass='mt-5 !text-black text-center' />
+
 				<div className='about-subtext capitalize'>
 					<p className=''>the game of begins-your lige, now an epic games </p>
 					<p className=''>
