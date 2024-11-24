@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Button from './Button'
 import { TiLocationArrow } from 'react-icons/ti'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { useEffect } from 'react'
+import { ScrollTrigger } from 'gsap/all'
 
 const Hero = () => {
 	/* -------------------------------- useState -------------------------------- */
@@ -15,7 +15,7 @@ const Hero = () => {
 
 	/* -------------------------------- functions -------------------------------- */
 
-	const totalVideos = 3
+	const totalVideos = 4
 	const nextVideoRef = useRef(null)
 	const upcomingVideoIndex = (currenIndex % totalVideos) + 1
 
@@ -39,6 +39,8 @@ const Hero = () => {
 	}, [loadedVideos])
 
 	/* ---------------------------------- gsap ---------------------------------- */
+
+	gsap.registerPlugin(ScrollTrigger)
 
 	useGSAP(
 		() => {
