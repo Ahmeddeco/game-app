@@ -27,13 +27,16 @@ const About = () => {
 	})
 
 	return (
-		<section className='min-h-screen w-screen  '>
+		<section className='min-h-screen w-screen' id='about'>
 			<div className='relative mb-8 flex items-center flex-col gap-5'>
 				<h2 className='font-general text-sm uppercase md:text-sm'>
 					Welcome to Zentry
 				</h2>
 
-				<AnimatedTitle title="disc<b>o</b>ver the world's  l<b>a</b>rgest <br/>shared adventure" containerClass='mt-5 !text-black text-center' />
+				<AnimatedTitle
+					title="disc<b>o</b>ver the world's  l<b>a</b>rgest <br/>shared adventure"
+					containerClass='mt-5 !text-black text-center'
+				/>
 
 				<div className='about-subtext capitalize'>
 					<p className=''>the game of begins-your lige, now an epic games </p>

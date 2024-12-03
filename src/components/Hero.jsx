@@ -85,7 +85,7 @@ const Hero = () => {
 	})
 
 	return (
-		<section className='relative h-dvh w-screen overflow-x-hidden'>
+		<section className='relative h-dvh w-screen overflow-x-hidden' id='hero'>
 			{/* three dots on loading */}
 
 			{isLoading && (
